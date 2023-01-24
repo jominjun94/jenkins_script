@@ -1,0 +1,3 @@
+ansible-playbook -i hosts create-cicd-devops-image.yml --limit 172.17.0.4;
+ansible-playbook -i hosts create-cicd-devops-container.yml --limit 172.17.0.3;
+

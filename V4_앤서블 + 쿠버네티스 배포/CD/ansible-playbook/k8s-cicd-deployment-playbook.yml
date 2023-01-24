@@ -1,0 +1,12 @@
+- name: Create pods using deployment 
+  hosts: kubernetes 
+  # become: true
+  # user: ubuntu
+ 
+  tasks: 
+  - name: delete the previous deployment
+    command: /usr/local/bin/kubectl delete deployment.apps/cicd-deployment
+    ignore_errors: yes
+	
+  - name: create a deployment
+    command: /usr/local/bin/kubectl apply -f /Users/jominjun/Desktop/jenkins_k8s/cicd-devops-deployment.yml

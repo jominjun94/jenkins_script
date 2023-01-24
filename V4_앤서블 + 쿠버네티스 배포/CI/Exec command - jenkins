@@ -1,0 +1,1 @@
+ansible-playbook -i ./k8s/hosts create-cicd-devops-image.yml --limit ansible-server

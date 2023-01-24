@@ -1,0 +1,8 @@
+- name: create service for deployment
+  hosts: kubernetes
+  # become: true
+  # user: ubuntu
+
+  tasks:
+  - name: create a service
+    command: /usr/local/bin/kubectl apply -f /Users/jominjun/Desktop/jenkins_k8s/cicd-devops-service.yml
